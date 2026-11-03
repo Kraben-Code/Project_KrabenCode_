@@ -1,24 +1,335 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok | Комисарчук Сергей</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101014;
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    background: #08080b;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #292930;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #fe2c55;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #25f4ee;
+}
+
+.hero {
+    min-height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #17171f, #24202d);
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #25f4ee;
+    text-shadow: 3px 3px #fe2c55;
+}
+
+.hero p {
+    color: #ccccd5;
+    font-size: 19px;
+    max-width: 650px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 28px;
+    background: #fe2c55;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #25aeb8;
+}
+
+section {
+    padding: 65px 8%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+h2 span {
+    color: #25f4ee;
+}
+
+.about {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    color: #d1d1d8;
+    font-size: 18px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #1c1c24;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 15px 18px 5px;
+    color: #25f4ee;
+}
+
+.card p {
+    padding: 0 18px 20px;
+    color: #ccccd5;
+}
+
+.dark {
+    background: #17171e;
+}
+
+.video {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.video iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 14px;
+}
+
+.video p {
+    color: #ccccd5;
+    margin-top: 15px;
+}
+
+.contacts {
+    text-align: center;
+    background: #1c1c24;
+    border-radius: 15px;
+    max-width: 700px;
+    margin: auto;
+    padding: 35px;
+}
+
+.contacts p {
+    margin: 12px;
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #08080b;
+    color: #999;
+}
+
+@media (max-width: 750px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
 <body>
 
-<h1> Привет Леха! Я создал этот сайт для того чтобы доказать что ты УЕБАН! </h1>
-<p> Итак Поехали!</p>
+<header>
+    <div class="logo">Tik<span>Tok.</span></div>
+    <nav>
+        <a href="#about">Про мене</a>
+        <a href="#hobby">Захоплення</a>
+        <a href="#video">Відео</a>
+        <a href="#contacts">Контакти</a>
+    </nav>
+</header>
 
-<h2> Первая причина - Ты не играешь со мной в роблокс нахуй!!! </h2>
-<p> Ты мразота не хочешь со мной играть, и не отвечаешь на звонки, даже не зовешь меня ни разу играть, и не играешь со мной даже если я тебя не звал </p>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZQ4-8f3MRazT7X1IX1e1iGioHtEDVJoXc0zxhwCb_PA&s" alt="My picture">
-<a href="https://www.roblox.com/">Rоblox Website </a>
+<div class="hero">
+    <h1>Привіт! Я <span>Сергій</span></h1>
+    <p>
+        Ласкаво прошу на мій сайт!
+        Тут я розповідаю про TikTok, створення відео,
+        творчість та свої захоплення.
+    </p>
+    <a href="#about" class="button">Дізнатися більше</a>
+</div>
 
-<h2> Причина номер два - Ты блядский мать его игнорщик!!! </h2>
-<p>Ты вечно игноришь, не пишешь не звонишь, быстрей машины летающие появятся нежели ты мне ответишь, сидишь где-то в какой-то засаде что ответить не можешь, уебан сука</p>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8MZMkV8ro-pN6deHRY49WqoSpB-356uSenk4aFKod5hVeUQxhJjK2GIs&s=10" alt="My picture">
+<section id="about">
+    <h2>Про <span>мене</span></h2>
+    <div class="about">
+        <p>
+            Мене звати Комисарчук Сергей.
+            Я цікавлюся сучасними технологіями,
+            соціальними мережами та створенням цифрового контенту.
+        </p>
+        <br>
+        <p>
+            Один із напрямів, який мене цікавить, — TikTok.
+            Це платформа, де кожен може проявити свою
+            фантазію, поділитися ідеями та створювати
+            цікаві короткі відео.
+        </p>
+    </div>
+</section>
 
-<h2>Причина третья - потому что ты уебан а я крутой</h2>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo6hkA_wtXHmOkjIh7pFijMB7ON04--dlXwM83rXA-GjHW_or0GWfaPJM&s=10" alt="xn">
+<section id="hobby" class="dark">
+    <h2>Мої <span>захоплення</span></h2>
 
-<h3> На этом мое представление окончено, Вывод один - ТЫ УЕБАН и иди нахуй </h3>
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800"
+                 alt="Соціальні мережі">
+            <h3>Соціальні мережі</h3>
+            <p>
+                Мені цікаво стежити за новими трендами,
+                популярними відео та розвитком соціальних мереж.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800"
+                 alt="Створення відео">
+            <h3>Створення відео</h3>
+            <p>
+                Подобається ідея створення власного контенту,
+                монтажу відео та пошуку цікавих сюжетів.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800"
+                 alt="Технології">
+            <h3>Технології</h3>
+            <p>
+                Також цікавлюся комп'ютерами,
+                програмуванням та новими цифровими технологіями.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="video">
+    <h2>Відео <span>та TikTok</span></h2>
+
+    <div class="video">
+        <iframe
+            src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
+            title="Відео про TikTok"
+            allowfullscreen>
+        </iframe>
+
+        <p>
+            Тут можна переглянути відео про TikTok,
+            його можливості та створення короткого контенту.
+        </p>
+
+        <p>
+            Мій профіль TikTok: @komisarchuk
+        </p>
+    </div>
+</section>
+
+<section id="contacts" class="dark">
+    <h2>Мої <span>контакти</span></h2>
+
+    <div class="contacts">
+        <p><strong>Автор:</strong> Комисарчук Сергей</p>
+        <p><strong>Email:</strong> komisarchuk@example.com</p>
+        <p><strong>TikTok:</strong> @komisarchuk</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Комисарчук Сергей. Персональний сайт про TikTok.
+</footer>
 
 </body>
 </html>
