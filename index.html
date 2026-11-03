@@ -1,335 +1,252 @@
-
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TikTok | Комисарчук Сергей</title>
-
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: #101014;
-    color: white;
-    line-height: 1.6;
-}
-
-header {
-    background: #08080b;
-    padding: 22px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #292930;
-}
-
-.logo {
-    font-size: 26px;
-    font-weight: bold;
-}
-
-.logo span {
-    color: #fe2c55;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 22px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #25f4ee;
-}
-
-.hero {
-    min-height: 440px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #17171f, #24202d);
-}
-
-.hero h1 {
-    font-size: 52px;
-    margin-bottom: 15px;
-}
-
-.hero h1 span {
-    color: #25f4ee;
-    text-shadow: 3px 3px #fe2c55;
-}
-
-.hero p {
-    color: #ccccd5;
-    font-size: 19px;
-    max-width: 650px;
-}
-
-.button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 13px 28px;
-    background: #fe2c55;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.button:hover {
-    background: #25aeb8;
-}
-
-section {
-    padding: 65px 8%;
-}
-
-h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-
-h2 span {
-    color: #25f4ee;
-}
-
-.about {
-    max-width: 850px;
-    margin: auto;
-    text-align: center;
-    color: #d1d1d8;
-    font-size: 18px;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.card {
-    background: #1c1c24;
-    border-radius: 14px;
-    overflow: hidden;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-7px);
-}
-
-.card img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-}
-
-.card h3 {
-    padding: 15px 18px 5px;
-    color: #25f4ee;
-}
-
-.card p {
-    padding: 0 18px 20px;
-    color: #ccccd5;
-}
-
-.dark {
-    background: #17171e;
-}
-
-.video {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-}
-
-.video iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border: none;
-    border-radius: 14px;
-}
-
-.video p {
-    color: #ccccd5;
-    margin-top: 15px;
-}
-
-.contacts {
-    text-align: center;
-    background: #1c1c24;
-    border-radius: 15px;
-    max-width: 700px;
-    margin: auto;
-    padding: 35px;
-}
-
-.contacts p {
-    margin: 12px;
-    font-size: 18px;
-}
-
-footer {
-    text-align: center;
-    padding: 25px;
-    background: #08080b;
-    color: #999;
-}
-
-@media (max-width: 750px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Персональний сайт Комісарчук Сергія про TikTok, короткі відео та творчість.">
+  <title>TikTok — світ коротких відео | Комісарчук Сергій</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #171820;
+      --muted: #686b76;
+      --paper: #ffffff;
+      --soft: #f6f7fa;
+      --pink: #fe2c55;
+      --cyan: #25dfe2;
+      --line: #e9eaf0;
+      --shadow: 0 16px 45px rgba(25, 28, 45, .09);
+      --radius: 18px;
     }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Manrope", Arial, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.65; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    .container { width: min(1120px, calc(100% - 44px)); margin: 0 auto; }
+    .topbar { height: 78px; display: flex; align-items: center; background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-size: 25px; font-weight: 800; letter-spacing: -1.2px; }
+    .brand .pink { color: var(--pink); }
+    .brand .cyan { color: #13bfc7; }
+    .nav-links { display: flex; align-items: center; gap: 29px; color: #555864; font-size: 13px; font-weight: 700; }
+    .nav-links a:hover { color: var(--pink); }
+    .nav-cta { background: var(--ink); color: #fff; border-radius: 8px; padding: 11px 17px; font-size: 12px; font-weight: 800; }
+    .hero { padding: 78px 0 84px; background: linear-gradient(115deg, #f7f8fb 0%, #fff 56%, #fff4f6 100%); overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.04fr .96fr; align-items: center; gap: 55px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--pink); background: #fff0f3; border-radius: 30px; padding: 8px 13px; font-size: 11px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 4px rgba(37,223,226,.15); }
+    h1 { font-size: clamp(40px, 5.2vw, 66px); line-height: 1.08; letter-spacing: -2.7px; margin: 22px 0 20px; font-weight: 800; }
+    h1 .accent { color: var(--pink); }
+    .hero-copy { color: var(--muted); font-size: 16px; max-width: 520px; }
+    .hero-actions { display: flex; align-items: center; gap: 13px; margin-top: 30px; flex-wrap: wrap; }
+    .btn { display: inline-flex; justify-content: center; align-items: center; padding: 14px 21px; border-radius: 9px; font-size: 13px; font-weight: 800; transition: .2s; }
+    .btn-primary { background: var(--pink); color: white; box-shadow: 0 9px 20px rgba(254,44,85,.2); }
+    .btn-primary:hover { transform: translateY(-2px); background: #e91f48; }
+    .btn-light { border: 1px solid #dfe1e8; background: white; }
+    .hero-visual { position: relative; min-height: 390px; display: grid; place-items: center; }
+    .hero-photo { width: 78%; height: 390px; object-fit: cover; border-radius: 22px; box-shadow: var(--shadow); }
+    .floating-card { position: absolute; bottom: 25px; left: 0; background: white; padding: 15px 18px; border-radius: 13px; box-shadow: var(--shadow); font-size: 12px; font-weight: 800; }
+    .floating-card span { display: block; color: var(--muted); font-size: 10px; font-weight: 600; margin-top: 2px; }
+    .play-mark { position: absolute; right: 4%; top: 40px; width: 65px; height: 65px; border-radius: 18px; background: var(--ink); color: white; display: grid; place-items: center; font-size: 26px; box-shadow: 5px 5px 0 var(--pink), -5px -5px 0 var(--cyan); }
+    section { padding: 82px 0; }
+    .section-head { text-align: center; max-width: 690px; margin: 0 auto 42px; }
+    .kicker { color: var(--pink); text-transform: uppercase; letter-spacing: 1.5px; font-size: 10px; font-weight: 800; }
+    h2 { font-size: clamp(29px, 3.5vw, 41px); line-height: 1.2; letter-spacing: -1.2px; margin: 9px 0 13px; }
+    .section-head p, .about-text p { color: var(--muted); font-size: 14px; }
+    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 65px; align-items: center; }
+    .about-image { width: 100%; height: 370px; object-fit: cover; border-radius: var(--radius); }
+    .about-text h2 { margin-bottom: 18px; }
+    .about-text p + p { margin-top: 13px; }
+    .signature { margin-top: 23px; font-weight: 800; font-size: 13px; }
+    .signature span { color: var(--pink); }
+    .soft-section { background: var(--soft); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .card { background: white; border: 1px solid #eff0f4; border-radius: var(--radius); overflow: hidden; transition: .25s; }
+    .card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .card img { width: 100%; height: 205px; object-fit: cover; }
+    .card-body { padding: 22px 22px 24px; }
+    .card-number { color: var(--pink); font-size: 11px; font-weight: 800; letter-spacing: 1px; }
+    .card h3 { font-size: 17px; margin: 6px 0 8px; }
+    .card p { color: var(--muted); font-size: 12px; }
+    .quote-band { background: var(--ink); color: white; padding: 54px 0; text-align: center; }
+    .quote-band p { font-size: clamp(20px, 3vw, 30px); font-weight: 800; line-height: 1.35; max-width: 800px; margin: 0 auto; letter-spacing: -.6px; }
+    .quote-band span { color: var(--cyan); }
+    .gallery { display: grid; grid-template-columns: 1.15fr .85fr .85fr; gap: 16px; }
+    .gallery img { width: 100%; height: 250px; object-fit: cover; border-radius: 13px; }
+    .gallery img:first-child { height: 300px; grid-row: span 2; }
+    .video-wrap { max-width: 820px; margin: 0 auto; background: white; border: 1px solid var(--line); padding: 13px; border-radius: 17px; box-shadow: var(--shadow); }
+    .video-frame { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 10px; background: #171820; }
+    .video-note { color: var(--muted); text-align: center; font-size: 12px; margin-top: 17px; }
+    .contact-section { background: #f7f8fb; }
+    .contact-box { max-width: 760px; margin: 0 auto; background: white; border: 1px solid var(--line); border-radius: 18px; padding: 38px; text-align: center; box-shadow: 0 10px 35px rgba(25,28,45,.04); }
+    .contact-box p { color: var(--muted); font-size: 13px; }
+    .contact-details { display: flex; justify-content: center; flex-wrap: wrap; gap: 13px; margin-top: 24px; }
+    .contact-item { padding: 12px 17px; background: var(--soft); border-radius: 9px; font-size: 12px; font-weight: 700; }
+    footer { background: #171820; color: #c4c5cc; padding: 25px 0; font-size: 11px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+    .footer-inner strong { color: white; }
+    @media (max-width: 800px) {
+      .nav-links { display: none; }
+      .hero { padding: 55px 0; }
+      .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 35px; }
+      .hero-visual { min-height: 310px; }
+      .hero-photo { height: 310px; }
+      .cards { grid-template-columns: 1fr 1fr; }
+      .gallery { grid-template-columns: 1fr 1fr; }
+      .gallery img:first-child { grid-row: auto; height: 230px; }
+      .gallery img { height: 230px; }
     }
-
-    nav a {
-        margin: 0;
+    @media (max-width: 540px) {
+      .container { width: min(100% - 30px, 1120px); }
+      .topbar { height: 67px; }
+      .brand { font-size: 22px; }
+      .nav-cta { padding: 9px 12px; }
+      h1 { letter-spacing: -1.8px; }
+      section { padding: 60px 0; }
+      .cards { grid-template-columns: 1fr; }
+      .card img { height: 220px; }
+      .contact-box { padding: 27px 18px; }
+      .footer-inner { flex-direction: column; text-align: center; }
     }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
+  </style>
 </head>
-
 <body>
-
-<header>
-    <div class="logo">Tik<span>Tok.</span></div>
-    <nav>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#home">tik<span class="pink">tok</span><span class="cyan">.</span></a>
+      <nav class="nav-links" aria-label="Головна навігація">
         <a href="#about">Про мене</a>
-        <a href="#hobby">Захоплення</a>
+        <a href="#interests">Захоплення</a>
+        <a href="#gallery">Галерея</a>
         <a href="#video">Відео</a>
         <a href="#contacts">Контакти</a>
-    </nav>
-</header>
-
-<div class="hero">
-    <h1>Привіт! Я <span>Сергій</span></h1>
-    <p>
-        Ласкаво прошу на мій сайт!
-        Тут я розповідаю про TikTok, створення відео,
-        творчість та свої захоплення.
-    </p>
-    <a href="#about" class="button">Дізнатися більше</a>
-</div>
-
-<section id="about">
-    <h2>Про <span>мене</span></h2>
-    <div class="about">
-        <p>
-            Мене звати Комисарчук Сергей.
-            Я цікавлюся сучасними технологіями,
-            соціальними мережами та створенням цифрового контенту.
-        </p>
-        <br>
-        <p>
-            Один із напрямів, який мене цікавить, — TikTok.
-            Це платформа, де кожен може проявити свою
-            фантазію, поділитися ідеями та створювати
-            цікаві короткі відео.
-        </p>
+      </nav>
+      <a class="nav-cta" href="#contacts">Зв'язатися</a>
     </div>
-</section>
+  </header>
 
-<section id="hobby" class="dark">
-    <h2>Мої <span>захоплення</span></h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800"
-                 alt="Соціальні мережі">
-            <h3>Соціальні мережі</h3>
-            <p>
-                Мені цікаво стежити за новими трендами,
-                популярними відео та розвитком соціальних мереж.
-            </p>
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Мій персональний сайт</div>
+          <h1>TikTok — світ <span class="accent">коротких відео</span></h1>
+          <p class="hero-copy">Привіт! Я Сергій. Тут я розповідаю про TikTok, сучасні тренди, творчість та захоплення цифровим світом.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#about">Дізнатися більше</a>
+            <a class="btn btn-light" href="#interests">Мої захоплення</a>
+          </div>
         </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800"
-                 alt="Створення відео">
-            <h3>Створення відео</h3>
-            <p>
-                Подобається ідея створення власного контенту,
-                монтажу відео та пошуку цікавих сюжетів.
-            </p>
+        <div class="hero-visual">
+          <img class="hero-photo" src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=1100&q=85" alt="Смартфон і соціальні мережі">
+          <div class="play-mark" aria-hidden="true">▶</div>
+          <div class="floating-card">Комісарчук Сергій<span>Автор сайту · 2026</span></div>
         </div>
+      </div>
+    </section>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800"
-                 alt="Технології">
-            <h3>Технології</h3>
-            <p>
-                Також цікавлюся комп'ютерами,
-                програмуванням та новими цифровими технологіями.
-            </p>
+    <section id="about">
+      <div class="container about-grid">
+        <img class="about-image" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85" alt="Робоче місце з ноутбуком">
+        <div class="about-text">
+          <div class="kicker">Трохи про автора</div>
+          <h2>Привіт! Мене звати Сергій</h2>
+          <p>Мене звати Комісарчук Сергій. Я цікавлюся сучасними технологіями, соціальними мережами та інтернет-культурою.</p>
+          <p>Особливо мене приваблює TikTok — платформа, де люди діляться ідеями, створюють короткі відео, знаходять цікаву інформацію та проявляють свою фантазію.</p>
+          <p>На цьому сайті я зібрав інформацію про свої інтереси та про те, чим мене захоплює світ коротких відео.</p>
+          <div class="signature">Комісарчук Сергій <span>✦</span></div>
         </div>
+      </div>
+    </section>
 
+    <section class="soft-section" id="interests">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Що мені цікаво</div>
+          <h2>Мої захоплення</h2>
+          <p>Мені подобається дізнаватися про нові цифрові можливості та спостерігати за тим, як створюється сучасний контент.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e879?auto=format&fit=crop&w=900&q=85" alt="Смартфон із соціальними мережами">
+            <div class="card-body"><div class="card-number">01 / SOCIAL</div><h3>Соціальні мережі</h3><p>Цікаво стежити за новими трендами, популярними авторами та розвитком соціальних платформ.</p></div>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=900&q=85" alt="Камера для створення відео">
+            <div class="card-body"><div class="card-number">02 / VIDEO</div><h3>Створення відео</h3><p>Мені подобається ідея придумувати сюжети, знімати цікаві моменти та монтувати короткі ролики.</p></div>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=85" alt="Комп'ютерна техніка">
+            <div class="card-body"><div class="card-number">03 / TECH</div><h3>Технології</h3><p>Також я цікавлюся комп'ютерами, програмуванням і новими цифровими інструментами.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="quote-band">
+      <div class="container"><p>«Кожна цікава ідея може стати <span>початком</span> чогось великого».</p></div>
     </div>
-</section>
 
-<section id="video">
-    <h2>Відео <span>та TikTok</span></h2>
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Натхнення та творчість</div>
+          <h2>Світ TikTok у фотографіях</h2>
+          <p>Кілька зображень, які передають атмосферу створення контенту та цифрової творчості.</p>
+        </div>
+        <div class="gallery">
+          <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1000&q=85" alt="Фотокамера">
+          <img src="https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?auto=format&fit=crop&w=900&q=85" alt="Смартфон">
+          <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85" alt="Команда за роботою">
+        </div>
+      </div>
+    </section>
 
-    <div class="video">
-        <iframe
+    <section class="soft-section" id="video">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Дивись та дізнавайся</div>
+          <h2>Відео про TikTok</h2>
+          <p>Відео про короткий формат, творчість та можливості соціальної платформи.</p>
+        </div>
+        <div class="video-wrap">
+          <!-- Заміни VIDEO_ID на ID будь-якого YouTube-відео про TikTok.
+               Наприклад: youtube.com/watch?v=AbCd123 -> VIDEO_ID = AbCd123 -->
+          <iframe class="video-frame"
             src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
             title="Відео про TikTok"
-            allowfullscreen>
-        </iframe>
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+        <p class="video-note">Навчальний проєкт про сучасні соціальні мережі та цифрову творчість.</p>
+      </div>
+    </section>
 
-        <p>
-            Тут можна переглянути відео про TikTok,
-            його можливості та створення короткого контенту.
-        </p>
+    <section class="contact-section" id="contacts">
+      <div class="container">
+        <div class="contact-box">
+          <div class="kicker">Будемо на зв'язку</div>
+          <h2>Контакти</h2>
+          <p>Дякую, що завітали на мій сайт! Тут можна знайти мої контактні дані.</p>
+          <div class="contact-details">
+            <div class="contact-item">Автор: Комісарчук Сергій</div>
+            <div class="contact-item">Email: komisarchuk@example.com</div>
+            <div class="contact-item">TikTok: @komisarchuk</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        <p>
-            Мій профіль TikTok: @komisarchuk
-        </p>
+  <footer>
+    <div class="container footer-inner">
+      <div><strong>tik<span style="color:#fe2c55">tok</span>.</strong> Персональний сайт про мої захоплення</div>
+      <div>© 2026 Комісарчук Сергій</div>
     </div>
-</section>
-
-<section id="contacts" class="dark">
-    <h2>Мої <span>контакти</span></h2>
-
-    <div class="contacts">
-        <p><strong>Автор:</strong> Комисарчук Сергей</p>
-        <p><strong>Email:</strong> komisarchuk@example.com</p>
-        <p><strong>TikTok:</strong> @komisarchuk</p>
-    </div>
-</section>
-
-<footer>
-    © 2026 Комисарчук Сергей. Персональний сайт про TikTok.
-</footer>
-
+  </footer>
 </body>
 </html>
